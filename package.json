@@ -1,0 +1,9 @@
+{
+  "name": "ai-models",
+  "version": "1.0.0",
+  "description": "A library for providing AI model names for various providers",
+  "license": "ISC",
+  "author": "SwasthK",
+  "type": "commonjs",
+  "main": "./dist/index.js"
+}
