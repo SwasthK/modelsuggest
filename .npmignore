@@ -1,0 +1,21 @@
+# Source files
+src/
+scripts/
+utils/
+
+# Build artifacts we don't need
+*.map
+*.tsbuildinfo
+
+# Development files
+tsconfig.json
+tsup.config.ts
+.gitignore
+.npmignore
+package-lock.json
+
+# Exclude other dist folders
+dist/scripts/
+dist/utils/
+
+
