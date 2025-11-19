@@ -5,5 +5,22 @@
   "license": "ISC",
   "author": "SwasthK",
   "type": "commonjs",
-  "main": "./dist/index.js"
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist"
+  },
+  "files": [
+    "dist/anannas"
+  ],
+  "exports": {
+    "./anannas": {
+      "types": "./dist/anannas/index.d.ts",
+      "default": "./dist/anannas/index.js"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
 }

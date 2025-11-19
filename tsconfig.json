@@ -1,16 +1,22 @@
 {
     "compilerOptions": {
-      "target": "es2016",                               
-      "module": "commonjs",  
-      "declaration": true,
-      "outDir": "dist",
-      "rootDir": "src",
-      "strict": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "resolveJsonModule": true
+        "target": "es2016",                               
+        "module": "commonjs",  
+        "declaration": true,
+        "outDir": "dist",
+        "rootDir": "src/models",
+        "strict": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "sourceMap": false,
+        "removeComments": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./*"]
+        }
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
-  }
+    "include": ["src/models/**/*"],
+    "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts", "src/scripts", "src/utils"]
+}
