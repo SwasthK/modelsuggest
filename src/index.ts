@@ -1,1 +1,1 @@
-console.log("Lets start 🎉");
+export * as Anannas from "./models/anannas";
