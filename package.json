@@ -9,13 +9,24 @@
     "build": "tsup",
     "clean": "rm -rf dist"
   },
+  "keywords": [
+    "ai",
+    "models",
+    "openrouter",
+    "anannas"
+  ],
   "files": [
-    "dist/anannas"
+    "dist/anannas",
+    "dist/openrouter"
   ],
   "exports": {
     "./anannas": {
       "types": "./dist/anannas/index.d.ts",
       "default": "./dist/anannas/index.js"
+    },
+    "./openrouter": {
+      "types": "./dist/openrouter/index.d.ts",
+      "default": "./dist/openrouter/index.js"
     }
   },
   "devDependencies": {

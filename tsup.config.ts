@@ -3,6 +3,7 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   entry: {
     'anannas/index': 'src/models/anannas/index.ts',
+    'openrouter/index': 'src/models/openrouter/index.ts',
   },
   format: ['cjs'],
   dts: true,
