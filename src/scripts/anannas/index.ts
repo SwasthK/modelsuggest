@@ -20,7 +20,7 @@ export async function syncAnannas() {
   try {
     const ids = await fetchAnannas();
     const models = normalizeModels(ids);
-    const outPath = path.join(process.cwd(), "src/anannas/models.ts");
+    const outPath = path.join(process.cwd(), "src/models/anannas/models.ts");
     writeModelsFile(outPath, models);
     console.log(`Anannas: wrote ${models.length} models to ${outPath}`);
   } catch (err) {

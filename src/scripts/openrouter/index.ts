@@ -20,7 +20,7 @@ export async function syncOpenRouter() {
   try {
     const ids = await fetchOpenRouter();
     const models = normalizeModels(ids);
-    const outPath = path.join(process.cwd(), "src/openrouter/models.ts");
+    const outPath = path.join(process.cwd(), "src/models/openrouter/models.ts");
     writeModelsFile(outPath, models);
     console.log(`OpenRouter: wrote ${models.length} models to ${outPath}`);
   } catch (err) {
