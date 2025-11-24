@@ -27,6 +27,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Pull latest changes
+        run: |
+          git pull --rebase origin main || git pull origin main
+
       - name: Sync models
         run: npm run sync
         env:
@@ -45,17 +54,6 @@ jobs:
       - name: Build
         if: steps.git-check.outputs.changed == 'true'
         run: npm run build
-
-      - name: Configure Git
-        if: steps.git-check.outputs.changed == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Pull latest changes
-        if: steps.git-check.outputs.changed == 'true'
-        run: |
-          git pull --rebase origin main || git pull origin main
 
       - name: Bump patch version
         if: steps.git-check.outputs.changed == 'true'
@@ -77,3 +75,10 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
           npm publish --access public
+
+      - name: Cleanup on failure
+        if: failure()
+        run: |
+          git reset --hard origin/main || git reset --hard HEAD
+          git clean -fd
+          echo "Cleaned up file changes due to workflow failure"
