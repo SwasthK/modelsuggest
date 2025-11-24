@@ -32,9 +32,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Pull latest changes
+      - name: Reset to origin/main
         run: |
-          git pull --rebase origin main || git pull origin main
+          git fetch origin main
+          git reset --hard origin/main
+          git clean -fd
 
       - name: Sync models
         run: npm run sync
