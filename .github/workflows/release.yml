@@ -52,6 +52,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Pull latest changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git pull --rebase origin main || git pull origin main
+
       - name: Bump patch version
         if: steps.git-check.outputs.changed == 'true'
         run: |
