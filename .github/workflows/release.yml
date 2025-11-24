@@ -67,17 +67,16 @@ jobs:
         if: steps.git-check.outputs.changed == 'true'
         run: |
           git fetch origin main
-          # Verify we're still on the same base as when we started
+          # If origin/main moved forward, stash changes, update, then reapply
           if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
-            echo "origin/main has moved forward. Aborting to let next run handle with fresh sync."
-            exit 1
+            echo "origin/main has moved forward. Updating base and reapplying changes."
+            git stash push -m "sync-changes"
+            git reset --hard origin/main
+            git stash pop
           fi
           git add src/models/anannas/models.ts src/models/openrouter/models.ts package.json package-lock.json
           git commit -m "chore(sync): update model lists"
-          if ! git push origin main; then
-            echo "Failed to push to origin/main. Aborting to prevent version mismatch."
-            exit 1
-          fi
+          git push origin main
 
       - name: Publish to npm
         if: steps.git-check.outputs.changed == 'true'
