@@ -2,13 +2,10 @@
   "name": "modelsuggest",
   "version": "1.0.4",
   "description": "A library for providing AI model names for various providers",
-  "license": "ISC",
-  "author": "SwasthK",
-  "type": "commonjs",
-  "scripts": {
-    "build": "tsup",
-    "clean": "rm -rf dist",
-    "sync": "tsx src/scripts/index.ts"
+  "license": "MIT",
+  "author": {
+    "name": "SwasthK",
+    "url": "https://github.com/SwasthK"
   },
   "keywords": [
     "ai",
@@ -16,6 +13,20 @@
     "openrouter",
     "anannas"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SwasthK/modelsuggest"
+  },
+  "homepage": "https://github.com/SwasthK/modelsuggest#readme",
+  "bugs": {
+    "url": "https://github.com/SwasthK/modelsuggest/issues"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "sync": "tsx src/scripts/index.ts"
+  },
   "files": [
     "dist/anannas",
     "dist/openrouter"
@@ -36,8 +47,12 @@
   },
   "typesVersions": {
     "*": {
-      "anannas": ["./dist/anannas/index.d.ts"],
-      "openrouter": ["./dist/openrouter/index.d.ts"]
+      "anannas": [
+        "./dist/anannas/index.d.ts"
+      ],
+      "openrouter": [
+        "./dist/openrouter/index.d.ts"
+      ]
     }
   },
   "devDependencies": {
