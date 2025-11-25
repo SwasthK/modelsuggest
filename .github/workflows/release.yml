@@ -89,6 +89,8 @@ jobs:
           git fetch origin main
           if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
             echo "origin/main moved forward again. Rebasing before push."
+            # Discard any unstaged changes before rebasing
+            git reset --hard HEAD
             if ! git pull --rebase origin main; then
               echo "Rebase failed. Aborting to let next run handle."
               git rebase --abort 2>/dev/null || true
