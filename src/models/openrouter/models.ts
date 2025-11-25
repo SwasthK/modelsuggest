@@ -27,6 +27,7 @@ const MODELS = [
     "anthropic/claude-haiku-4.5",
     "anthropic/claude-opus-4",
     "anthropic/claude-opus-4.1",
+    "anthropic/claude-opus-4.5",
     "anthropic/claude-sonnet-4",
     "anthropic/claude-sonnet-4.5",
     "arcee-ai/coder-large",
@@ -251,6 +252,7 @@ const MODELS = [
     "openai/o4-mini-high",
     "opengvlab/internvl3-78b",
     "openrouter/auto",
+    "openrouter/bert-nebulon-alpha",
     "perplexity/sonar",
     "perplexity/sonar-deep-research",
     "perplexity/sonar-pro",
@@ -341,11 +343,11 @@ const MODELS = [
     "z-ai/glm-4.6",
     "z-ai/glm-4.6:exacto"
 ] as const;
-  
-  export type Model = (typeof MODELS)[number];
-  
-  export const model = MODELS.reduce((acc, m) => {
-      acc[m] = m;
-      return acc;
-  }, {} as Record<Model, Model>);
-  
+
+export type Model = (typeof MODELS)[number];
+
+export const model = MODELS.reduce((acc, m) => {
+    acc[m] = m;
+    return acc;
+}, {} as Record<Model, Model>);
+
