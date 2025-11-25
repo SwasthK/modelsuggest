@@ -85,6 +85,16 @@ jobs:
           fi
           git add src/models/anannas/models.ts src/models/openrouter/models.ts package.json package-lock.json
           git commit -m "chore(sync): update model lists"
+          # Fetch latest and rebase before pushing to handle concurrent runs
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo "origin/main moved forward again. Rebasing before push."
+            if ! git pull --rebase origin main; then
+              echo "Rebase failed. Aborting to let next run handle."
+              git rebase --abort 2>/dev/null || true
+              exit 1
+            fi
+          fi
           git push origin main
 
       - name: Publish to npm
