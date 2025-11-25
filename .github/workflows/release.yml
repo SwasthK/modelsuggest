@@ -67,12 +67,21 @@ jobs:
         if: steps.git-check.outputs.changed == 'true'
         run: |
           git fetch origin main
-          # If origin/main moved forward, stash changes, update, then reapply
+          # If origin/main moved forward, stash only model files, update, then reapply
           if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
             echo "origin/main has moved forward. Updating base and reapplying changes."
-            git stash push -m "sync-changes"
+            # Stash only model files to avoid package.json conflicts
+            git stash push -m "sync-changes" src/models/anannas/models.ts src/models/openrouter/models.ts
             git reset --hard origin/main
-            git stash pop
+            # Re-bump version on the new base
+            npm version patch --no-git-tag-version --no-commit-hooks || true
+            git reset HEAD~1 2>/dev/null || true
+            # Pop model changes
+            if ! git stash pop; then
+              echo "Conflict detected when reapplying model changes. Aborting."
+              git stash drop
+              exit 1
+            fi
           fi
           git add src/models/anannas/models.ts src/models/openrouter/models.ts package.json package-lock.json
           git commit -m "chore(sync): update model lists"
