@@ -65,6 +65,9 @@ jobs:
 
       - name: Commit and push changes
         if: steps.git-check.outputs.changed == 'true'
+        env:
+          ANANNAS_API_URL: ${{ secrets.ANANNAS_API_URL }}
+          OPENROUTER_API_URL: ${{ secrets.OPENROUTER_API_URL }}
         run: |
           git fetch origin main
           # If origin/main moved forward, reset and re-sync fresh
