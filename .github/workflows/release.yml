@@ -38,7 +38,7 @@ jobs:
 
       - name: Reset to origin/main
         run: |
-          git fetch origin main
+          git fetch origin
           git reset --hard origin/main
           git clean -fd
 
@@ -79,12 +79,14 @@ jobs:
           while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
             echo "Attempt $((RETRY_COUNT + 1)) of $MAX_RETRIES"
             
-            # Fetch latest origin/main
-            git fetch origin main
+            # Fetch latest and update all remote tracking refs
+            git fetch origin
             
             # Check if we need to re-sync from a newer base
             LOCAL_BASE=$(git rev-parse HEAD)
             REMOTE_HEAD=$(git rev-parse origin/main)
+            echo "Local HEAD: $LOCAL_BASE"
+            echo "Remote origin/main: $REMOTE_HEAD"
             
             if [ "$LOCAL_BASE" != "$REMOTE_HEAD" ]; then
               echo "origin/main has moved forward. Re-syncing from latest base."
