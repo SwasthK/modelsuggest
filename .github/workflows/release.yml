@@ -61,15 +61,37 @@ jobs:
         if: steps.git-check.outputs.changed == 'true'
         run: npm run build
 
-      - name: Bump patch version
-        if: steps.git-check.outputs.changed == 'true'
-        run: |
-          npm version patch --no-git-tag-version --no-commit-hooks || true
-          git reset HEAD~1 2>/dev/null || true
-
       - name: Commit and push changes
         if: steps.git-check.outputs.changed == 'true'
+        env:
+          ANANNAS_API_URL: ${{ secrets.ANANNAS_API_URL }}
+          OPENROUTER_API_URL: ${{ secrets.OPENROUTER_API_URL }}
         run: |
+          # Bump version and commit
+          npm version patch --no-git-tag-version
+          git add -A
+          git commit -m "chore(sync): update model lists"
+          
+          # Try to push
+          if git push origin main; then
+            echo "Push successful!"
+            exit 0
+          fi
+          
+          echo "Push failed. Fetching latest and regenerating..."
+          
+          # Fetch latest origin/main
+          git fetch origin
+          
+          # Reset to latest (discard our commit)
+          git reset --hard origin/main
+          
+          # Regenerate everything fresh on top of latest
+          npm run sync
+          npm run build
+          npm version patch --no-git-tag-version
+          
+          # Commit and push
           git add -A
           git commit -m "chore(sync): update model lists"
           git push origin main
