@@ -69,68 +69,10 @@ jobs:
 
       - name: Commit and push changes
         if: steps.git-check.outputs.changed == 'true'
-        env:
-          ANANNAS_API_URL: ${{ secrets.ANANNAS_API_URL }}
-          OPENROUTER_API_URL: ${{ secrets.OPENROUTER_API_URL }}
         run: |
-          MAX_RETRIES=3
-          RETRY_COUNT=0
-          
-          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-            echo "Attempt $((RETRY_COUNT + 1)) of $MAX_RETRIES"
-            
-            # Fetch latest and update all remote tracking refs
-            git fetch origin
-            
-            # Check if we need to re-sync from a newer base
-            LOCAL_BASE=$(git rev-parse HEAD)
-            REMOTE_HEAD=$(git rev-parse origin/main)
-            echo "Local HEAD: $LOCAL_BASE"
-            echo "Remote origin/main: $REMOTE_HEAD"
-            
-            if [ "$LOCAL_BASE" != "$REMOTE_HEAD" ]; then
-              echo "origin/main has moved forward. Re-syncing from latest base."
-              git reset --hard origin/main
-              git clean -fd
-              npm run sync
-              npm run build
-              npm version patch --no-git-tag-version --no-commit-hooks || true
-              git reset HEAD~1 2>/dev/null || true
-            fi
-            
-            # Stage and commit
-            git add -A
-            
-            # Check if there's anything to commit
-            if git diff --cached --quiet; then
-              echo "No changes to commit after re-sync. Exiting successfully."
-              exit 0
-            fi
-            
-            git commit -m "chore(sync): update model lists"
-            
-            # Try to push immediately (no rebase - we just synced from origin/main)
-            if git push origin main; then
-              echo "Push successful!"
-              exit 0
-            fi
-            
-            echo "Push failed. Will retry with fresh sync."
-            # Reset the commit so we can retry cleanly
-            git reset --soft HEAD~1
-            git reset HEAD
-            git clean -fd
-            
-            RETRY_COUNT=$((RETRY_COUNT + 1))
-            
-            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-              echo "Waiting 5 seconds before retry..."
-              sleep 5
-            fi
-          done
-          
-          echo "Failed after $MAX_RETRIES attempts. Letting next scheduled run handle it."
-          exit 1
+          git add -A
+          git commit -m "chore(sync): update model lists"
+          git push origin main
 
       - name: Publish to npm
         if: steps.git-check.outputs.changed == 'true'
