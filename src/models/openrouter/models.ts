@@ -59,7 +59,6 @@ const MODELS = [
     "deepseek/deepseek-r1-0528",
     "deepseek/deepseek-r1-0528-qwen3-8b",
     "deepseek/deepseek-r1-distill-llama-70b",
-    "deepseek/deepseek-r1-distill-llama-70b:free",
     "deepseek/deepseek-r1-distill-qwen-14b",
     "deepseek/deepseek-r1-distill-qwen-32b",
     "deepseek/deepseek-v3.1-terminus",
