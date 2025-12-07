@@ -250,7 +250,6 @@ const MODELS = [
     "openai/o4-mini-high",
     "opengvlab/internvl3-78b",
     "openrouter/auto",
-    "openrouter/bodybuilder",
     "perplexity/sonar",
     "perplexity/sonar-deep-research",
     "perplexity/sonar-pro",
