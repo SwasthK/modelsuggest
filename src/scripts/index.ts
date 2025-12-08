@@ -15,10 +15,10 @@ async function main() {
     }
   }
 
-  console.log("✔ All provider syncers completed");
+  console.log("All provider syncers completed");
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error("Sync process failed:", err);
   process.exit(1);
 });

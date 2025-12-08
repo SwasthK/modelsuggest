@@ -29,7 +29,8 @@
   },
   "files": [
     "dist/anannas",
-    "dist/openrouter"
+    "dist/openrouter",
+    "dist/groq"
   ],
   "exports": {
     "./anannas": {
@@ -43,6 +44,12 @@
       "import": "./dist/openrouter/index.js",
       "require": "./dist/openrouter/index.js",
       "default": "./dist/openrouter/index.js"
+    },
+    "./groq": {
+      "types": "./dist/groq/index.d.ts",
+      "import": "./dist/groq/index.js",
+      "require": "./dist/groq/index.js",
+      "default": "./dist/groq/index.js"
     }
   },
   "typesVersions": {
@@ -52,6 +59,9 @@
       ],
       "openrouter": [
         "./dist/openrouter/index.d.ts"
+      ],
+      "groq": [
+        "./dist/groq/index.d.ts"
       ]
     }
   },

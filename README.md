@@ -5,11 +5,13 @@ A TypeScript library providing AI model names for various providers with full ty
 ## Installation
 
 ```bash
-npm install modelsuggest
+bun add modelsuggest
 # or
 pnpm add modelsuggest
 # or
 yarn add modelsuggest
+# or
+npm install modelsuggest
 ```
 
 ## Usage
@@ -41,6 +43,7 @@ useModel(model["anthropic/claude-3.5-sonnet"]);
 
 - **[anannas](https://anannas.ai)** - `modelsuggest/anannas`
 - **[openrouter](https://openrouter.ai)** - `modelsuggest/openrouter`
+- **[groq](https://groq.com)** - `modelsuggest/groq`
 
 ## Features
 
