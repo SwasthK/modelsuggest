@@ -2,7 +2,7 @@ name: Release Models
 
 on:
   schedule:
-    - cron: "0 0 * * *"  
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -15,6 +15,11 @@ jobs:
     permissions:
       contents: write
       packages: write
+    env:
+      ANANNAS_API_URL: ${{ secrets.ANANNAS_API_URL }}
+      OPENROUTER_API_URL: ${{ secrets.OPENROUTER_API_URL }}
+      GROQ_API_URL: ${{ secrets.GROQ_API_URL }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
 
     steps:
       - name: Checkout
@@ -44,14 +49,11 @@ jobs:
 
       - name: Sync models
         run: npm run sync
-        env:
-          ANANNAS_API_URL: ${{ secrets.ANANNAS_API_URL }}
-          OPENROUTER_API_URL: ${{ secrets.OPENROUTER_API_URL }}
 
       - name: Check for changes
         id: git-check
         run: |
-          if git diff --exit-code src/models/anannas/models.ts src/models/openrouter/models.ts; then
+          if git diff --exit-code src/models; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -63,34 +65,31 @@ jobs:
 
       - name: Commit and push changes
         if: steps.git-check.outputs.changed == 'true'
-        env:
-          ANANNAS_API_URL: ${{ secrets.ANANNAS_API_URL }}
-          OPENROUTER_API_URL: ${{ secrets.OPENROUTER_API_URL }}
         run: |
           # Bump version and commit
           npm version patch --no-git-tag-version
           git add -A
           git commit -m "chore(sync): update model lists"
-          
+
           # Try to push
           if git push origin main; then
             echo "Push successful!"
             exit 0
           fi
-          
+
           echo "Push failed. Fetching latest and regenerating..."
-          
+
           # Fetch latest origin/main
           git fetch origin
-          
+
           # Reset to latest (discard our commit)
           git reset --hard origin/main
-          
+
           # Regenerate everything fresh on top of latest
           npm run sync
           npm run build
           npm version patch --no-git-tag-version
-          
+
           # Commit and push
           git add -A
           git commit -m "chore(sync): update model lists"
