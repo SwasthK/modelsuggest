@@ -70,6 +70,7 @@ const MODELS = [
     "deepseek/deepseek-v3.2-exp",
     "deepseek/deepseek-v3.2-speciale",
     "eleutherai/llemma_7b",
+    "essentialai/rnj-1-instruct",
     "google/gemini-2.0-flash-001",
     "google/gemini-2.0-flash-exp:free",
     "google/gemini-2.0-flash-lite-001",
@@ -248,6 +249,7 @@ const MODELS = [
     "openai/o4-mini-high",
     "opengvlab/internvl3-78b",
     "openrouter/auto",
+    "openrouter/bodybuilder",
     "perplexity/sonar",
     "perplexity/sonar-deep-research",
     "perplexity/sonar-pro",
@@ -298,6 +300,7 @@ const MODELS = [
     "qwen/qwq-32b",
     "raifle/sorcererlm-8x22b",
     "relace/relace-apply-3",
+    "relace/relace-search",
     "sao10k/l3-euryale-70b",
     "sao10k/l3-lunaris-8b",
     "sao10k/l3.1-70b-hanami-x1",
@@ -333,7 +336,8 @@ const MODELS = [
     "z-ai/glm-4.5-air:free",
     "z-ai/glm-4.5v",
     "z-ai/glm-4.6",
-    "z-ai/glm-4.6:exacto"
+    "z-ai/glm-4.6:exacto",
+    "z-ai/glm-4.6v"
 ] as const;
 
 export type Model = (typeof MODELS)[number];
