@@ -138,6 +138,7 @@ const MODELS = [
     "minimax/minimax-m1",
     "minimax/minimax-m2",
     "mistralai/codestral-2508",
+    "mistralai/devstral-2512:free",
     "mistralai/devstral-medium",
     "mistralai/devstral-small",
     "mistralai/devstral-small-2505",
