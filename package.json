@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/SwasthK/modelsuggest"
+    "url": "git+https://github.com/SwasthK/modelsuggest.git"
   },
   "homepage": "https://github.com/SwasthK/modelsuggest#readme",
   "bugs": {
