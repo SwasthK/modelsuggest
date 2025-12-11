@@ -101,7 +101,14 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
-          npm publish --access public
+          if npm publish --access public; then
+            echo "Publish successful!"
+          else
+            echo "Publish FAILED. Reverting commit..."
+            git revert --no-edit HEAD
+              git push origin main
+            exit 1
+          fi
 
       - name: Cleanup on failure
         if: failure()
