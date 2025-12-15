@@ -125,7 +125,6 @@ const MODELS = [
     "meta-llama/llama-guard-2-8b",
     "meta-llama/llama-guard-3-8b",
     "meta-llama/llama-guard-4-12b",
-    "meta-llama/llama-guard-4-12b:free",
     "microsoft/phi-3-medium-128k-instruct",
     "microsoft/phi-3-mini-128k-instruct",
     "microsoft/phi-3.5-mini-128k-instruct",
