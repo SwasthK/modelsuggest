@@ -1,5 +1,6 @@
 const MODELS = [
     "allam-2-7b",
+    "canopylabs/orpheus-arabic-saudi",
     "groq/compound",
     "groq/compound-mini",
     "llama-3.1-8b-instant",
