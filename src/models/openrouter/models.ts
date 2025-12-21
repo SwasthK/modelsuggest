@@ -285,7 +285,6 @@ const MODELS = [
     "qwen/qwen3-235b-a22b",
     "qwen/qwen3-235b-a22b-2507",
     "qwen/qwen3-235b-a22b-thinking-2507",
-    "qwen/qwen3-235b-a22b:free",
     "qwen/qwen3-30b-a3b",
     "qwen/qwen3-30b-a3b-instruct-2507",
     "qwen/qwen3-30b-a3b-thinking-2507",
