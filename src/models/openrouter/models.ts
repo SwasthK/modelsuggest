@@ -347,7 +347,8 @@ const MODELS = [
     "z-ai/glm-4.5v",
     "z-ai/glm-4.6",
     "z-ai/glm-4.6:exacto",
-    "z-ai/glm-4.6v"
+    "z-ai/glm-4.6v",
+    "z-ai/glm-4.7"
 ] as const;
 
 export type Model = (typeof MODELS)[number];
