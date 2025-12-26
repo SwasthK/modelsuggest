@@ -40,7 +40,6 @@ const MODELS = [
     "gemini-2.5-flash",
     "gemini-2.5-pro",
     "gemma-2-9b-it-fast",
-    "gemma-3-12b-it",
     "gemma-3-27b-it",
     "gemma-3-27b-it-fast",
     "gemma-3-4b-it",
