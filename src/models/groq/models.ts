@@ -16,8 +16,6 @@ const MODELS = [
     "openai/gpt-oss-120b",
     "openai/gpt-oss-20b",
     "openai/gpt-oss-safeguard-20b",
-    "playai-tts",
-    "playai-tts-arabic",
     "qwen/qwen3-32b",
     "whisper-large-v3",
     "whisper-large-v3-turbo"
