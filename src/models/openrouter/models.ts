@@ -10,6 +10,7 @@ const MODELS = [
     "allenai/olmo-3-32b-think",
     "allenai/olmo-3-7b-instruct",
     "allenai/olmo-3-7b-think",
+    "allenai/olmo-3.1-32b-instruct",
     "allenai/olmo-3.1-32b-think",
     "alpindale/goliath-120b",
     "amazon/nova-2-lite-v1",
