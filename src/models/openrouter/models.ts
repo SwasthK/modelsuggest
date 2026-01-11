@@ -6,7 +6,7 @@ const MODELS = [
     "aion-labs/aion-rp-llama-3.1-8b",
     "alfredpros/codellama-7b-instruct-solidity",
     "alibaba/tongyi-deepresearch-30b-a3b",
-    "allenai/molmo-2-8b",
+    "allenai/molmo-2-8b:free",
     "allenai/olmo-2-0325-32b-instruct",
     "allenai/olmo-3-32b-think",
     "allenai/olmo-3-7b-instruct",
