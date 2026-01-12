@@ -106,7 +106,6 @@ const MODELS = [
     "inflection/inflection-3-pi",
     "inflection/inflection-3-productivity",
     "kwaipilot/kat-coder-pro",
-    "kwaipilot/kat-coder-pro:free",
     "liquid/lfm-2.2-6b",
     "liquid/lfm2-8b-a1b",
     "mancer/weaver",
