@@ -229,6 +229,8 @@ const MODELS = [
     "openai/gpt-5.2-chat",
     "openai/gpt-5.2-codex",
     "openai/gpt-5.2-pro",
+    "openai/gpt-audio",
+    "openai/gpt-audio-mini",
     "openai/gpt-oss-120b",
     "openai/gpt-oss-120b:exacto",
     "openai/gpt-oss-120b:free",
@@ -337,7 +339,8 @@ const MODELS = [
     "z-ai/glm-4.6",
     "z-ai/glm-4.6:exacto",
     "z-ai/glm-4.6v",
-    "z-ai/glm-4.7"
+    "z-ai/glm-4.7",
+    "z-ai/glm-4.7-flash"
 ] as const;
 
 export type Model = (typeof MODELS)[number];
