@@ -102,6 +102,8 @@ const MODELS = [
     "inflection/inflection-3-productivity",
     "kwaipilot/kat-coder-pro",
     "liquid/lfm-2.2-6b",
+    "liquid/lfm-2.5-1.2b-instruct:free",
+    "liquid/lfm-2.5-1.2b-thinking:free",
     "liquid/lfm2-8b-a1b",
     "mancer/weaver",
     "meituan/longcat-flash-chat",
