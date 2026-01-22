@@ -323,6 +323,7 @@ const MODELS = [
     "tngtech/tng-r1t-chimera",
     "tngtech/tng-r1t-chimera:free",
     "undi95/remm-slerp-l2-13b",
+    "writer/palmyra-x5",
     "x-ai/grok-3",
     "x-ai/grok-3-beta",
     "x-ai/grok-3-mini",
