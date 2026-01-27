@@ -334,7 +334,6 @@ const MODELS = [
     "x-ai/grok-4.1-fast",
     "x-ai/grok-code-fast-1",
     "xiaomi/mimo-v2-flash",
-    "xiaomi/mimo-v2-flash:free",
     "z-ai/glm-4-32b",
     "z-ai/glm-4.5",
     "z-ai/glm-4.5-air",
