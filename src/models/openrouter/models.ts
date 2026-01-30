@@ -71,7 +71,6 @@ const MODELS = [
     "eleutherai/llemma_7b",
     "essentialai/rnj-1-instruct",
     "google/gemini-2.0-flash-001",
-    "google/gemini-2.0-flash-exp:free",
     "google/gemini-2.0-flash-lite-001",
     "google/gemini-2.5-flash",
     "google/gemini-2.5-flash-image",
