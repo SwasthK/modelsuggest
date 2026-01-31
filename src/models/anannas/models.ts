@@ -199,6 +199,7 @@ const MODELS = [
     "internvl3-78b",
     "jamba-1-5-large-v1-0",
     "kimi-k2-0905",
+    "kimi-k2-5",
     "kimi-k2-instruct",
     "kimi-k2-instruct-0905",
     "kimi-k2-thinking",
