@@ -311,6 +311,7 @@ const MODELS = [
     "sao10k/l3.1-euryale-70b",
     "sao10k/l3.3-euryale-70b",
     "stepfun-ai/step3",
+    "stepfun/step-3.5-flash:free",
     "switchpoint/router",
     "tencent/hunyuan-a13b-instruct",
     "thedrummer/cydonia-24b-v4.1",
