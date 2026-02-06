@@ -29,6 +29,7 @@ const MODELS = [
     "anthropic/claude-opus-4",
     "anthropic/claude-opus-4.1",
     "anthropic/claude-opus-4.5",
+    "anthropic/claude-opus-4.6",
     "anthropic/claude-sonnet-4",
     "anthropic/claude-sonnet-4.5",
     "arcee-ai/coder-large",
