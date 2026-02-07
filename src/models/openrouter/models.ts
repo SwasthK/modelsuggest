@@ -250,6 +250,7 @@ const MODELS = [
     "openrouter/auto",
     "openrouter/bodybuilder",
     "openrouter/free",
+    "openrouter/pony-alpha",
     "perplexity/sonar",
     "perplexity/sonar-deep-research",
     "perplexity/sonar-pro",

@@ -22,6 +22,7 @@ const MODELS = [
     "claude-opus-4",
     "claude-opus-4-1",
     "claude-opus-4-5",
+    "claude-opus-4-6",
     "claude-sonnet-4",
     "claude-sonnet-4-5",
     "codex-mini-latest",
