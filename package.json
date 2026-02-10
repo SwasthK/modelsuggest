@@ -1,6 +1,6 @@
 {
   "name": "modelsuggest",
-  "version": "1.0.58",
+  "version": "1.0.59",
   "description": "A library for providing AI model names for various providers",
   "license": "MIT",
   "author": {

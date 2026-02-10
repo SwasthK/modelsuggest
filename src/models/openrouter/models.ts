@@ -1,6 +1,5 @@
 const MODELS = [
     "ai21/jamba-large-1.7",
-    "ai21/jamba-mini-1.7",
     "aion-labs/aion-1.0",
     "aion-labs/aion-1.0-mini",
     "aion-labs/aion-rp-llama-3.1-8b",
@@ -246,6 +245,7 @@ const MODELS = [
     "openai/o4-mini-deep-research",
     "openai/o4-mini-high",
     "opengvlab/internvl3-78b",
+    "openrouter/aurora-alpha",
     "openrouter/auto",
     "openrouter/bodybuilder",
     "openrouter/free",
@@ -288,6 +288,7 @@ const MODELS = [
     "qwen/qwen3-coder:exacto",
     "qwen/qwen3-coder:free",
     "qwen/qwen3-max",
+    "qwen/qwen3-max-thinking",
     "qwen/qwen3-next-80b-a3b-instruct",
     "qwen/qwen3-next-80b-a3b-instruct:free",
     "qwen/qwen3-next-80b-a3b-thinking",
