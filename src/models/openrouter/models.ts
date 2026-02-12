@@ -133,9 +133,7 @@ const MODELS = [
     "mistralai/devstral-medium",
     "mistralai/devstral-small",
     "mistralai/ministral-14b-2512",
-    "mistralai/ministral-3b",
     "mistralai/ministral-3b-2512",
-    "mistralai/ministral-8b",
     "mistralai/ministral-8b-2512",
     "mistralai/mistral-7b-instruct",
     "mistralai/mistral-7b-instruct-v0.1",
@@ -154,7 +152,6 @@ const MODELS = [
     "mistralai/mistral-small-3.1-24b-instruct:free",
     "mistralai/mistral-small-3.2-24b-instruct",
     "mistralai/mistral-small-creative",
-    "mistralai/mistral-tiny",
     "mistralai/mixtral-8x22b-instruct",
     "mistralai/mixtral-8x7b-instruct",
     "mistralai/pixtral-12b",
@@ -249,7 +246,6 @@ const MODELS = [
     "openrouter/auto",
     "openrouter/bodybuilder",
     "openrouter/free",
-    "openrouter/pony-alpha",
     "perplexity/sonar",
     "perplexity/sonar-deep-research",
     "perplexity/sonar-pro",
@@ -308,6 +304,7 @@ const MODELS = [
     "sao10k/l3.1-70b-hanami-x1",
     "sao10k/l3.1-euryale-70b",
     "sao10k/l3.3-euryale-70b",
+    "stepfun/step-3.5-flash",
     "stepfun/step-3.5-flash:free",
     "switchpoint/router",
     "tencent/hunyuan-a13b-instruct",
@@ -342,7 +339,8 @@ const MODELS = [
     "z-ai/glm-4.6:exacto",
     "z-ai/glm-4.6v",
     "z-ai/glm-4.7",
-    "z-ai/glm-4.7-flash"
+    "z-ai/glm-4.7-flash",
+    "z-ai/glm-5"
 ] as const;
 
 export type Model = (typeof MODELS)[number];
