@@ -296,6 +296,8 @@ const MODELS = [
     "qwen/qwen3-vl-32b-instruct",
     "qwen/qwen3-vl-8b-instruct",
     "qwen/qwen3-vl-8b-thinking",
+    "qwen/qwen3.5-397b-a17b",
+    "qwen/qwen3.5-plus-02-15",
     "qwen/qwq-32b",
     "raifle/sorcererlm-8x22b",
     "relace/relace-apply-3",
