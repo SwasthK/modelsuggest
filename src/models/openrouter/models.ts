@@ -242,7 +242,6 @@ const MODELS = [
     "openai/o4-mini",
     "openai/o4-mini-deep-research",
     "openai/o4-mini-high",
-    "opengvlab/internvl3-78b",
     "openrouter/auto",
     "openrouter/bodybuilder",
     "openrouter/free",
