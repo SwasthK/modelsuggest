@@ -135,6 +135,7 @@ const MODELS = [
     "minimax/minimax-m2-her",
     "minimax/minimax-m2.1",
     "minimax/minimax-m2.5",
+    "minimax/minimax-m2.5:free",
     "mistralai/codestral-2508",
     "mistralai/devstral-2512",
     "mistralai/devstral-medium",
@@ -177,6 +178,7 @@ const MODELS = [
     "nvidia/llama-3.3-nemotron-super-49b-v1.5",
     "nvidia/nemotron-3-nano-30b-a3b",
     "nvidia/nemotron-3-nano-30b-a3b:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
     "nvidia/nemotron-nano-12b-v2-vl",
     "nvidia/nemotron-nano-12b-v2-vl:free",
     "nvidia/nemotron-nano-9b-v2",
@@ -244,6 +246,8 @@ const MODELS = [
     "openrouter/auto",
     "openrouter/bodybuilder",
     "openrouter/free",
+    "openrouter/healer-alpha",
+    "openrouter/hunter-alpha",
     "perplexity/sonar",
     "perplexity/sonar-deep-research",
     "perplexity/sonar-pro",
@@ -326,6 +330,8 @@ const MODELS = [
     "x-ai/grok-4",
     "x-ai/grok-4-fast",
     "x-ai/grok-4.1-fast",
+    "x-ai/grok-4.20-beta",
+    "x-ai/grok-4.20-multi-agent-beta",
     "x-ai/grok-code-fast-1",
     "xiaomi/mimo-v2-flash",
     "z-ai/glm-4-32b",
@@ -337,7 +343,8 @@ const MODELS = [
     "z-ai/glm-4.6v",
     "z-ai/glm-4.7",
     "z-ai/glm-4.7-flash",
-    "z-ai/glm-5"
+    "z-ai/glm-5",
+    "z-ai/glm-5-turbo"
 ] as const;
 
 export type Model = (typeof MODELS)[number];
