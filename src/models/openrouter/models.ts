@@ -246,6 +246,7 @@ const MODELS = [
     "openai/o4-mini-high",
     "openrouter/auto",
     "openrouter/bodybuilder",
+    "openrouter/elephant-alpha",
     "openrouter/free",
     "perplexity/sonar",
     "perplexity/sonar-deep-research",
