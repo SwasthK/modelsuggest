@@ -119,6 +119,7 @@ const MODELS = [
     "meta-llama/llama-4-scout",
     "meta-llama/llama-guard-3-8b",
     "meta-llama/llama-guard-4-12b",
+    "meta-llama/llama-guard-4-12b:free",
     "microsoft/phi-4",
     "microsoft/wizardlm-2-8x22b",
     "minimax/minimax-01",
