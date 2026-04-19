@@ -198,7 +198,6 @@ const MODELS = [
     "openai/gpt-4o-mini-2024-07-18",
     "openai/gpt-4o-mini-search-preview",
     "openai/gpt-4o-search-preview",
-    "openai/gpt-4o:extended",
     "openai/gpt-5",
     "openai/gpt-5-chat",
     "openai/gpt-5-codex",
