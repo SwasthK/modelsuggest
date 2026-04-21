@@ -158,6 +158,7 @@ const MODELS = [
     "moonshotai/kimi-k2-0905",
     "moonshotai/kimi-k2-thinking",
     "moonshotai/kimi-k2.5",
+    "moonshotai/kimi-k2.6",
     "morph/morph-v3-fast",
     "morph/morph-v3-large",
     "nex-agi/deepseek-v3.1-nex-n1",
