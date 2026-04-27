@@ -303,6 +303,7 @@ const MODELS = [
     "qwen/qwen3.5-9b",
     "qwen/qwen3.5-flash-02-23",
     "qwen/qwen3.5-plus-02-15",
+    "qwen/qwen3.6-27b",
     "qwen/qwen3.6-plus",
     "qwen/qwq-32b",
     "rekaai/reka-edge",
