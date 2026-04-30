@@ -162,7 +162,6 @@ const MODELS = [
     "mistralai/mistral-small-2603",
     "mistralai/mistral-small-3.1-24b-instruct",
     "mistralai/mistral-small-3.2-24b-instruct",
-    "mistralai/mistral-small-creative",
     "mistralai/mixtral-8x22b-instruct",
     "mistralai/mixtral-8x7b-instruct",
     "mistralai/pixtral-large-2411",
