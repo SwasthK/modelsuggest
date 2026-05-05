@@ -156,6 +156,7 @@ const MODELS = [
     "mistralai/mistral-large-2411",
     "mistralai/mistral-large-2512",
     "mistralai/mistral-medium-3",
+    "mistralai/mistral-medium-3-5",
     "mistralai/mistral-medium-3.1",
     "mistralai/mistral-nemo",
     "mistralai/mistral-saba",
