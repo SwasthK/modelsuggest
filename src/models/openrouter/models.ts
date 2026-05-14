@@ -72,6 +72,7 @@ const MODELS = [
     "deepseek/deepseek-v3.2-exp",
     "deepseek/deepseek-v3.2-speciale",
     "deepseek/deepseek-v4-flash",
+    "deepseek/deepseek-v4-flash:free",
     "deepseek/deepseek-v4-pro",
     "essentialai/rnj-1-instruct",
     "google/gemini-2.0-flash-001",
