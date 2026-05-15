@@ -48,7 +48,7 @@ const MODELS = [
     "baidu/ernie-4.5-300b-a47b",
     "baidu/ernie-4.5-vl-28b-a3b",
     "baidu/ernie-4.5-vl-424b-a47b",
-    "baidu/qianfan-ocr-fast:free",
+    "baidu/qianfan-ocr-fast",
     "bytedance-seed/seed-1.6",
     "bytedance-seed/seed-1.6-flash",
     "bytedance-seed/seed-2.0-lite",
