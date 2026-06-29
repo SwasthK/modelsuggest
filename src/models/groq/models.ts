@@ -13,6 +13,7 @@ const MODELS = [
     "openai/gpt-oss-20b",
     "openai/gpt-oss-safeguard-20b",
     "qwen/qwen3-32b",
+    "qwen/qwen3.6-27b",
     "whisper-large-v3",
     "whisper-large-v3-turbo"
 ] as const;
